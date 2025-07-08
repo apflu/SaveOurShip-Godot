@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dv17olfto423h"]
+
+[node name="Inventory" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 1024.0
+offset_bottom = 512.0
+metadata/_edit_lock_ = true
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 1088.0
+offset_bottom = 576.0
+metadata/_edit_lock_ = true

@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmg1dfrbrpkv6"]
+
+[ext_resource type="Script" uid="uid://bmgtvr4pfkje3" path="res://Game/Character/Monster.cs" id="1_x8ibm"]
+[ext_resource type="SpriteFrames" uid="uid://dnss0m2oesj5m" path="res://Game/Character/Assets/Monster01.tres" id="2_6xti2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_byjyg"]
+radius = 24.0
+
+[node name="Monster" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 7
+mass = 42.0
+gravity_scale = 0.0
+angular_damp = 100.0
+script = ExtResource("1_x8ibm")
+Speed = 300.0
+Push_Resistance = 0.0
+Force_Magnitude = 4000.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_byjyg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_6xti2")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_enabled = true
+
+[node name="PathfindingTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="PathfindingTimer" to="." method="ReCalculatePath"]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2egpf44n85mu"]
+
+[ext_resource type="Script" uid="uid://b5tb7iw0jyqpk" path="res://Game/Weapon/Combo/ComboSet.cs" id="1_vsi1o"]
+
+[node name="ComboSet" type="Node2D"]
+script = ExtResource("1_vsi1o")
+Combos = Array[Resource]([])

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6b3rgjdxy33v"]
+
+[ext_resource type="Script" uid="uid://123bpuwm15e1" path="res://Game/Weapon/BaseWeapon.cs" id="1_te3ie"]
+
+[node name="BaseWeapon" type="Node2D" node_paths=PackedStringArray("CameraShakeTimer")]
+script = ExtResource("1_te3ie")
+CameraShakeTimer = NodePath("Timers/CameraShakeStartTimer")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="AttackArea" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AttackArea"]
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="CameraShakeStartTimer" type="Timer" parent="Timers"]
+wait_time = 0.2
+one_shot = true

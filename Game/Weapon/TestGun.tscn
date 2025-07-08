@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://dly46d7n6fjv"]
+
+[ext_resource type="PackedScene" uid="uid://c6b3rgjdxy33v" path="res://Game/Weapon/BaseWeapon.tscn" id="1_mh41h"]
+[ext_resource type="SpriteFrames" uid="uid://cqc2lo5ui832" path="res://Game/Weapon/Assets/TestGun.tres" id="2_1ecxo"]
+[ext_resource type="Script" uid="uid://du8rsfpflyq56" path="res://Game/Weapon/TestGun.cs" id="2_4q7c7"]
+
+[node name="TestGun" instance=ExtResource("1_mh41h")]
+script = ExtResource("2_4q7c7")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = ExtResource("2_1ecxo")
+animation = &"weapon_attack_W"

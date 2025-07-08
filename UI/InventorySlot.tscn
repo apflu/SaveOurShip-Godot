@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfyd3megirl63"]
+
+[ext_resource type="Script" uid="uid://cq0pgoso6prtu" path="res://UI/InventorySlot.cs" id="1_p66gu"]
+
+[node name="Panel" type="Panel"]
+script = ExtResource("1_p66gu")

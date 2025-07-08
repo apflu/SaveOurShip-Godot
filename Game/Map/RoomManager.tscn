@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://chcv8wphl8p2u"]
+
+[ext_resource type="Script" uid="uid://dmn7t24tjxjuj" path="res://Game/Tile/RoomManager.cs" id="1_ivja0"]
+
+[node name="RoomManager" type="Node"]
+script = ExtResource("1_ivja0")
