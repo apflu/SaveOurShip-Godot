@@ -3,23 +3,25 @@
 - master分支是我们的成品分支，一般来说不会修改它的内容。绝大多数的日常更新在dev分支上进行。
 - 如果你完成了一个功能，极度推荐创建一个PR(Pull Request)。PR能够很好地记录你的工作量，并方便排查问题等。
 ### 创建PR的过程
-1. 创建一个你自己的branch。一般而言，要做什么就起什么名字，例如编写了战斗就取名为`combat`。
-   你可以在上面做任何事情，不用担心弄坏别人写到一半的代码。
+1. 创建一个你自己的branch并切换到它。
    ```
    git branch -b combat
    ```
-3. 进行你的更改，并commit在上面。
+   一般而言，要做什么就起什么名字，例如编写了战斗就取名为`combat`。
+   你可以在上面做任何事情，不用担心弄坏别人写到一半的代码。
+
+4. 进行你的更改，并commit在上面。
    
    如果你在编写的时候不小心正处于其他的branch上（比如master或dev），你可以暂存更改，切换到正确的branch之后，再把暂存区的更改commit到上面。
    ```
    # 先保存你刚做好的修改
    git add .
    # 现在你可以安全切换分支（例如combat）
-   git branch combat
+   git checkout combat      # 假如还没创建combat分支，就用上面的命令（git branch -b）去创建它
    # 然后进行commit
    git commit -m "lorem ipsum"
    ```
-4. 现在你可以创建PR了。
+5. 现在你可以创建PR了。
 
    * 打开github。切换到Pull request页（实际上如果你刚commit完它会给你一个显眼的提示，用来一键创建PR）；
    * 选择base为`dev`；
